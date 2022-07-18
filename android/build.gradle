@@ -1,3 +1,9 @@
+allprojects {
+  repositories {
+    maven { url 'https://jitpack.io' }
+  }
+}
+
 buildscript {
   // Buildscript is evaluated before everything else so we can't use getExtOrDefault
   def kotlin_version = "1.4.32"
@@ -5,6 +11,7 @@ buildscript {
   repositories {
     google()
     mavenCentral()
+    maven { url 'https://jitpack.io' }
   }
 
   dependencies {
@@ -126,8 +133,10 @@ dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation 'com.github.ko-devHong.android-multi-pickers:taehong.multi.img.picker:v.1.0.0'
 //  implementation 'io.github.lucksiege:pictureselector:v2.7.3-rc08'
-  implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+//  implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
   implementation 'com.github.bumptech.glide:glide:4.12.0'
   annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
 }
