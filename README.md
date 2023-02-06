@@ -69,9 +69,15 @@ Here are some related issues in the RN repo: [Issue 30202](https://github.com/fa
 
 ```xml
     <uses-permission android:name="android.permission.CAMERA" />
+    <!-- request permission android version < 13 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- request permission android version >= 13 -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
 ```
+
 ## Usage
 
 See [options](#Options)
@@ -123,19 +129,19 @@ const response = await MultipleImagePicker.openPicker(options);
 | maximumMessageTitle                         | string |                     Notification                      |   iOS    | The title of the alert when the user chooses to exceed the specified number of pictures           |
 | messageTitleButton                          | string |                     Notification                      |   iOS    | The title of button in the alert when the user chooses to exceed the specified number of pictures |
 | tapHereToChange                             | string |                  Tap here to change                   |   iOS    | The sub-title in navigation bar (under albums's name in iOS)                                      |
-| maximumMessage                              | string | You have selected the maximum number of media allowed |   iOS   | The description of the alert when the user chooses to exceed the specified number of pictures     |
-| maximumVideoMessage                         | string | You have selected the maximum number of media allowed |   iOS   | The description of the alert when the user chooses to exceed the specified number of videos       |
+| maximumMessage                              | string | You have selected the maximum number of media allowed |   iOS    | The description of the alert when the user chooses to exceed the specified number of pictures     |
+| maximumVideoMessage                         | string | You have selected the maximum number of media allowed |   iOS    | The description of the alert when the user chooses to exceed the specified number of videos       |
 
 #### selectedAssets (Important)
 
-Get an Array value only(Only works when ```singleSelectedMode === false```). If you want React Native Multiple Image Picker to re-select previously selected images / videos, you need to add “selectedAssets” in [options](#Options). Perhaps I say a little bit confusing. See [Example](https://github.com/baronha/react-native-multiple-image-picker/tree/main/example) for more details.
+Get an Array value only(Only works when `singleSelectedMode === false`). If you want React Native Multiple Image Picker to re-select previously selected images / videos, you need to add “selectedAssets” in [options](#Options). Perhaps I say a little bit confusing. See [Example](https://github.com/baronha/react-native-multiple-image-picker/tree/main/example) for more details.
 
 ## Response Object
 
 | Property         |  Type  | Platform | Description                                                                                          |
 | ---------------- | :----: | :------: | :--------------------------------------------------------------------------------------------------- |
 | path             | string |   Both   | Selected media's path                                                                                |
-| fileName         | string |   Both   | Selected media's file name                                                                            |
+| fileName         | string |   Both   | Selected media's file name                                                                           |
 | localIdentifier  | string |   Both   | Selected media's local identifier                                                                    |
 | width            | number |   Both   | Selected photo/video width                                                                           |
 | height           | number |   Both   | Selected photo/video height                                                                          |
