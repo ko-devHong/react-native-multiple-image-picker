@@ -16,6 +16,13 @@ React Native Multiple Image Picker enables application to pick images and videos
 
 ## Installation
 
+.npmrc
+
+```
+@ko-devhong:registry=https://npm.pkg.github.com/react-native-multiple-image-picker
+//npm.pkg.github.com/:_authToken={NPM_TOKEN}
+```
+
 ```sh
 npm i @ko-devHong/react-native-multiple-image-picker
 or

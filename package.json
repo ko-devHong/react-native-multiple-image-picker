@@ -48,7 +48,7 @@
   "homepage": "https://github.com/ko-devHong/react-native-multiple-image-picker#readme",
   "publishConfig": {
     "access": "public",
-    "@ko-devhong:registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
