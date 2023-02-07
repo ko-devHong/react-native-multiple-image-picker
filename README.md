@@ -6,8 +6,6 @@
 
 React Native Multiple Image Picker enables application to pick images and videos from multiple smart album in iOS/Android, similar to the current Facebook App. React Native Multiple Image Picker is based on two libraries available, [TLPhotoPicker](https://github.com/tilltue/TLPhotoPicker) and [PictureSelector](https://github.com/LuckSiege/PictureSelector)
 
-> Related: [React Native Photo Editor](https://github.com/baronha/react-native-photo-editor)
-
 ## Demo 👉👈
 
 | iOS                                                  | Android                                                  |
@@ -83,7 +81,7 @@ Here are some related issues in the RN repo: [Issue 30202](https://github.com/fa
 See [options](#Options)
 
 ```js
-import MultipleImagePicker from '@ko-devHong/react-native-multiple-image-picker';
+import MultipleImagePicker from '@ko-developerhong/react-native-multiple-image-picker';
 // ...
 const response = await MultipleImagePicker.openPicker(options);
 ```
@@ -134,7 +132,7 @@ const response = await MultipleImagePicker.openPicker(options);
 
 #### selectedAssets (Important)
 
-Get an Array value only(Only works when `singleSelectedMode === false`). If you want React Native Multiple Image Picker to re-select previously selected images / videos, you need to add “selectedAssets” in [options](#Options). Perhaps I say a little bit confusing. See [Example](https://github.com/baronha/react-native-multiple-image-picker/tree/main/example) for more details.
+Get an Array value only(Only works when `singleSelectedMode === false`). If you want React Native Multiple Image Picker to re-select previously selected images / videos, you need to add “selectedAssets” in [options](#Options). Perhaps I say a little bit confusing. See [Example](https://github.com/ko-devHong/react-native-multiple-image-picker/tree/main/example) for more details.
 
 ## Response Object
 
@@ -161,8 +159,8 @@ Get an Array value only(Only works when `singleSelectedMode === false`). If you 
 
 ## Performance
 
-We're trying to improve performance. If you have a better solution, please open a [issue](https://github.com/baronha/react-native-multiple-image-picker/issues)
-or [pull request](https://github.com/baronha/react-native-multiple-image-picker/pulls). Best regards!
+We're trying to improve performance. If you have a better solution, please open a [issue](https://github.com/ko-devHong/react-native-multiple-image-picker/issues)
+or [pull request](https://github.com/ko-devHong/react-native-multiple-image-picker/pulls). Best regards!
 
 ## Contributing
 
