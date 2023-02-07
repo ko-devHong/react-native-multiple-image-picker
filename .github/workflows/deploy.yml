@@ -38,5 +38,5 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          echo "\n//npm.pkg.github.com/:_authToken={NPM_TOKEN}" >> .npmrc
+          echo "\n//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
           yarn deploy
