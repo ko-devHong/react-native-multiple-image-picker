@@ -4,7 +4,7 @@
   <img src="./files/banner.png" width="100%">
 </p>
 
-React Native Multiple Image Picker enables application to pick images and videos from multiple smart album in iOS/Android, similar to the current Facebook App. React Native Multiple Image Picker is based on two libraries available, [TLPhotoPicker](https://github.com/tilltue/TLPhotoPicker) and [PictureSelector](https://github.com/LuckSiege/PictureSelector)
+React Native Multiple Image Picker enables application to pick images and videos from multiple smart album in iOS/Android, similar to the current Facebook App. React Native Multiple Image Picker is based on two libraries available, [TLPhotoPicker](https://github.com/tilltue/TLPhotoPicker) and [PictureSelector](https://github.com/ko-devHong/android-multi-pickers)
 
 ## Demo 👉👈
 
@@ -172,4 +172,4 @@ MIT
 <br>
 [TLPhotoPicker](https://github.com/tilltue/TLPhotoPicker/blob/master/LICENSE)
 <br>
-[PictureSelector](https://github.com/LuckSiege/PictureSelector/blob/master/LICENSE)
+[PictureSelector](https://github.com/ko-devHong/android-multi-pickers/blob/main/LICENSE)
