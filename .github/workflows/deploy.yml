@@ -1,0 +1,40 @@
+name: deploy @ko-devhong/react-native-multiple-image-picker package
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: Cache node modules
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: install
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          yarn
+
+      - name: deploy package
+        run: |
+          export NPM_TOKEN=${{ secret.NPM_TOKEN }}
+          yarn deploy
