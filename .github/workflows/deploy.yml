@@ -6,7 +6,7 @@ on:
       - 'v*.*.*'
 
 jobs:
-  lint:
+  deploy:
     runs-on: ubuntu-latest
 
     strategy:
@@ -35,6 +35,8 @@ jobs:
           yarn
 
       - name: deploy package
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          export NPM_TOKEN=${{ secrets.NPM_TOKEN }}
+          echo "\n//npm.pkg.github.com/:_authToken={NPM_TOKEN}" >> .npmrc
           yarn deploy
