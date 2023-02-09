@@ -402,7 +402,6 @@
     "get-stream": "^4.1.0",
     "fs-extra": "^8.1.0",
     "get-intrinsic": "^1.1.1",
-    "fsevents": "^2.3.2",
     "gh-got": "^8.1.0",
     "get-pkg-repo": "^1.4.0",
     "get-stdin": "^8.0.0",
@@ -896,5 +895,8 @@
     "y18n": "^4.0.1",
     "yaml": "^1.10.0",
     "yocto-queue": "^0.1.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
